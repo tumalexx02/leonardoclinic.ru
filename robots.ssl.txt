@@ -1,0 +1,23 @@
+# Netcat Robots file
+User-agent: *
+
+Clean-param: calltouch_tm
+Clean-param: etext
+Disallow: /netcat/
+Disallow: /admin/
+Disallow: /shares/
+Disallow: /question-response/
+Disallow: /photo-gallery/
+Disallow: /contacts/requisites.php
+Disallow: /shares/
+Disallow: /sitemap.xvl
+Disallow: /stati/stati_8.html
+Disallow: /stati/stati_5.html
+Disallow: /stati/stati_6.html
+
+Host: https://leonardoclinic.ru/
+Sitemap: https://leonardoclinic.ru/sitemap.xml
+
+# Auto-generated section. Do not change. Не изменяйте содержимое этого раздела.
+Allow: /services/ #7#
+# End of auto-generated section.

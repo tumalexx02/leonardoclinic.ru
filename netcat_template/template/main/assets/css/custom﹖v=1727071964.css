@@ -1,0 +1,429 @@
+/* Styles for dialog window */
+#small-dialog {
+	background: white;
+	padding: 20px 30px;
+	text-align: left;
+	max-width: 40%;
+	margin: 40px auto;
+	position: relative;
+}
+
+@media screen and (max-width: 768px) {
+	#small-dialog {
+		max-width: 80%;
+		padding: 10px 15px;
+	}
+}
+
+@media screen and (max-width: 375px) {
+	#small-dialog {
+		max-width: 90%;
+		padding: 10px 15px;
+	}
+}
+
+#small-dialog .contact-form {
+	margin-top: 0;
+	box-shadow: initial;
+}
+
+
+/**
+ * Fade-zoom animation for first dialog
+ */
+
+/* start state */
+.my-mfp-zoom-in .zoom-anim-dialog {
+	opacity: 0;
+
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+
+
+
+	-webkit-transform: scale(0.8);
+	-moz-transform: scale(0.8);
+	-ms-transform: scale(0.8);
+	-o-transform: scale(0.8);
+	transform: scale(0.8);
+}
+
+/* animate in */
+.my-mfp-zoom-in.mfp-ready .zoom-anim-dialog {
+	opacity: 1;
+
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	-o-transform: scale(1);
+	transform: scale(1);
+}
+
+/* animate out */
+.my-mfp-zoom-in.mfp-removing .zoom-anim-dialog {
+	-webkit-transform: scale(0.8);
+	-moz-transform: scale(0.8);
+	-ms-transform: scale(0.8);
+	-o-transform: scale(0.8);
+	transform: scale(0.8);
+
+	opacity: 0;
+}
+
+/* Dark overlay, start state */
+.my-mfp-zoom-in.mfp-bg {
+	opacity: 0;
+	-webkit-transition: opacity 0.3s ease-out;
+	-moz-transition: opacity 0.3s ease-out;
+	-o-transition: opacity 0.3s ease-out;
+	transition: opacity 0.3s ease-out;
+}
+
+/* animate in */
+.my-mfp-zoom-in.mfp-ready.mfp-bg {
+	opacity: 0.8;
+}
+
+/* animate out */
+.my-mfp-zoom-in.mfp-removing.mfp-bg {
+	opacity: 0;
+}
+
+
+
+/**
+ * Fade-move animation for second dialog
+ */
+
+/* at start */
+.my-mfp-slide-bottom .zoom-anim-dialog {
+	opacity: 0;
+	-webkit-transition: all 0.2s ease-out;
+	-moz-transition: all 0.2s ease-out;
+	-o-transition: all 0.2s ease-out;
+	transition: all 0.2s ease-out;
+
+	-webkit-transform: translateY(-20px) perspective(600px) rotateX(10deg);
+	-moz-transform: translateY(-20px) perspective(600px) rotateX(10deg);
+	-ms-transform: translateY(-20px) perspective(600px) rotateX(10deg);
+	-o-transform: translateY(-20px) perspective(600px) rotateX(10deg);
+	transform: translateY(-20px) perspective(600px) rotateX(10deg);
+
+}
+
+/* animate in */
+.my-mfp-slide-bottom.mfp-ready .zoom-anim-dialog {
+	opacity: 1;
+	-webkit-transform: translateY(0) perspective(600px) rotateX(0);
+	-moz-transform: translateY(0) perspective(600px) rotateX(0);
+	-ms-transform: translateY(0) perspective(600px) rotateX(0);
+	-o-transform: translateY(0) perspective(600px) rotateX(0);
+	transform: translateY(0) perspective(600px) rotateX(0);
+}
+
+/* animate out */
+.my-mfp-slide-bottom.mfp-removing .zoom-anim-dialog {
+	opacity: 0;
+
+	-webkit-transform: translateY(-10px) perspective(600px) rotateX(10deg);
+	-moz-transform: translateY(-10px) perspective(600px) rotateX(10deg);
+	-ms-transform: translateY(-10px) perspective(600px) rotateX(10deg);
+	-o-transform: translateY(-10px) perspective(600px) rotateX(10deg);
+	transform: translateY(-10px) perspective(600px) rotateX(10deg);
+}
+
+/* Dark overlay, start state */
+.my-mfp-slide-bottom.mfp-bg {
+	opacity: 0;
+
+	-webkit-transition: opacity 0.3s ease-out;
+	-moz-transition: opacity 0.3s ease-out;
+	-o-transition: opacity 0.3s ease-out;
+	transition: opacity 0.3s ease-out;
+}
+
+/* animate in */
+.my-mfp-slide-bottom.mfp-ready.mfp-bg {
+	opacity: 0.8;
+}
+
+/* animate out */
+.my-mfp-slide-bottom.mfp-removing.mfp-bg {
+	opacity: 0;
+}
+
+footer .pbmit-contact-widget-email a,
+footer .pbmit-contact-widget-phone a {
+	color: var(--pbmit-global-color);
+}
+
+footer .pbmit-contact-widget-line a {
+	color: var(--pbmit-link-color-hover);
+}
+
+.footer-mini-menu {
+	display: flex;
+}
+
+.footer-mini-menu ul {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+
+.footer-mini-menu ul li+li {
+	margin-left: 20px;
+}
+
+.footer-mini-menu a::before {
+	position: absolute;
+	content: '\e814';
+	left: 0;
+	font-size: 16px;
+	top: 0px;
+	color: inherit;
+	font-family: 'pbminfotech-base-icons';
+}
+
+.footer-mini-menu a {
+	position: relative;
+	padding-left: 20px;
+	color: rgba(255, 255, 255, 1);
+	font-size: 16px;
+	line-height: 18px;
+	letter-spacing: 0;
+	font-weight: 400;
+}
+
+.top_header_btn {
+	padding-top: 30px;
+	text-align: left;
+}
+
+.contact-form-pages {
+	margin-top: 30px;
+}
+
+@media screen and (max-width: 768px) {
+	.contact-form-pages {
+		margin-top: 10px;
+	}
+}
+
+.price_items_header {
+	padding: 0 0 12px 0;
+	border-bottom: 1px solid #dadada;
+	margin: 0 0 12px 0;
+	font-size: 24px;
+	line-height: 38px;
+	color: #42341e;
+}
+
+.price_items_header_link {
+	font-size: 24px;
+	line-height: 38px;
+}
+
+.price_items {
+	position: relative;
+	padding: 0 40px 30px 40px;
+}
+
+@media screen and (max-width: 768px) {
+	.price_items {
+		position: relative;
+		padding: 0 20px 30px 20px;
+	}
+}
+
+@media screen and (max-width: 520px) {
+	.price_items {
+		position: relative;
+		padding: 0 5px 30px 5px;
+	}
+}
+
+.price_item {
+	display: flex;
+	width: 100%;
+	padding: 10px 0;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom: 1px solid #dadada;
+}
+
+.price_items_kode {
+	width: 20%;
+}
+
+.price_items_name {
+	width: 65%;
+}
+
+.price_items_price {
+	width: 10%;
+	text-align: right;
+}
+
+@media screen and (max-width: 520px) {
+	.price_item {
+		flex-wrap: wrap;
+	}
+
+	.price_items_kode {
+		width: 100%;
+	}
+
+	.price_items_price {
+		width: 30%;
+	}
+}
+
+.site-header-phone {
+	margin-left: 22px;
+	margin-right: 22px;
+}
+
+.site-header-phone .pbmit-ihbox-icon-wrapper {
+	font-size: 40px;
+	line-height: 60px;
+	color: var(--pbmit-white-color);
+	text-align: center;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	background-color: #04947d;
+}
+
+.site-header-phone .pbmit-ihbox-icon-wrapper a {
+	color: var(--pbmit-white-color);
+	display: block;
+}
+
+@media screen and (min-width: 1199px) {
+	.site-header-phone {
+		display: none;
+	}
+}
+
+.block_people_photos_header {
+	padding: 20px 30px;
+}
+
+.block_people_photos {
+	position: relative;
+	width: 100%;
+	background-position: center center;
+	background-attachment: scroll;
+	background-image: url('../images/block_people_photos.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.block_people_photos_header {
+	text-align: center;
+	color: #ffffff;
+	font-size: 18px;
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.block_people_photos_header h3 {
+	color: #ffffff;
+	font-size: 40px;
+	padding: 30px 0 30px;
+}
+
+.block_people_photos_inner {
+	position: relative;
+	padding: 0 30px 20px 30px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+
+.block_people_photos_item {
+	width: 160px;
+	height: 160px;
+	position: relative;
+}
+
+.block_people_photos_item img {
+	position: absolute;
+	cursor: pointer;
+	top: 10px;
+	left: 10px;
+	height: 140px;
+	width: 140px;
+	border-radius: 12px;
+	transition:
+		width 1s,
+		height 1s,
+		transform 0.5s;
+}
+
+.block_people_photos_item:hover img {
+	/*width: 150px;
+	height: 150px;*/
+	/*top: 5px;
+	left: 5px;*/
+	transform: scale(1.2);
+}
+
+@media screen and (max-width: 709px) {
+	.block_people_photos_inner {
+		padding: 0 15px 20px 15px;
+	}
+
+	.block_people_photos_header {
+		padding: 20px 15px;
+	}
+}
+
+.people-history {
+	background: white;
+	padding: 20px 30px;
+	text-align: left;
+	max-width: 70%;
+	margin: 40px auto;
+	position: relative;
+}
+
+@media screen and (max-width: 768px) {
+	.people-history {
+		max-width: 80%;
+		padding: 10px 15px;
+	}
+}
+
+@media screen and (max-width: 375px) {
+	.people-history {
+		max-width: 90%;
+		padding: 10px 15px;
+	}
+}
+
+.people-history .contact-form {
+	margin-top: 0;
+	box-shadow: initial;
+	padding: 0;
+}
+
+.people-history-form-name {
+	color: #42341e;
+	font-size: 30px;
+	font-weight: 700;
+	padding: 0 0 10px 0;
+}
+
+.people-history-form-hd {
+	color: #42341e;
+	font-size: 18px;
+	padding: 0 0 5px 0;
+}
+
+.people-history-form-work {
+	padding: 0 0 10px 0;
+}
