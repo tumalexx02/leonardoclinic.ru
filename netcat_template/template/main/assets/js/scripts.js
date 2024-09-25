@@ -425,10 +425,10 @@ const heroSwiper = new Swiper('#hero-slider.swiper-container', {
     el: '.swiper-pagination',
     clickable: true,
   },
-  autoplay: {
-    delay: 5000,
-    disableOnInteraction: false,
-  },
+  // autoplay: {
+  //   delay: 5000,
+  //   disableOnInteraction: false,
+  // },
   speed: 1000,
   effect: 'fade',
   fadeEffect: {
@@ -442,22 +442,19 @@ const heroSwiper = new Swiper('#hero-slider.swiper-container', {
     slideChangeTransitionStart: function () {
         const currentSlide = document.querySelector('.swiper-slide-active');
 
-        // Анимация заголовков
         const title = currentSlide.querySelector('.hero-slide-title');
         const subtitle = currentSlide.querySelector('.hero-slide-subtitle');
         const button = currentSlide.querySelector('.hero-slide-button');
 
-        // Убираем старые анимации
         title.classList.remove('animate__fadeInLeft');
         subtitle.classList.remove('animate__fadeInLeft');
         button.classList.remove('animate__fadeInLeft');
 
-        // Ждем начало анимации нового слайда
         setTimeout(() => {
             title.classList.add('animate__fadeInLeft');
             subtitle.classList.add('animate__fadeInLeft');
             button.classList.add('animate__fadeInLeft');
-        }, 100); // Даем небольшую задержку для плавности
+        }, 100);
     }
 }
 });

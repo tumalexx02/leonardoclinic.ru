@@ -31,6 +31,8 @@
   font-weight: 400;
   font-family: "Tenor Sans", system-ui;
   letter-spacing: 1px;
+  cursor: default;
+  text-shadow: 0 0 16px rgba(255, 255, 255, 0.6);
 }
 
 .hero-slide-subtitle {
@@ -41,6 +43,8 @@
   font-size: 20px;
   line-height: 32px;
   margin-top: 20px;
+  cursor: default;
+  text-shadow: 0 0 16px rgba(255, 255, 255, 0.6);
 }
 
 .hero-slide-button {
@@ -68,12 +72,15 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.5);
+  opacity: 0.25 !important;
   display: flex;
-  padding: 18px;
-  height: auto;
-  width: auto;
+  width: 60px;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
   margin-top: auto;
+  transition: background-color 0.4s ease, opacity 0.4s ease;
 }
 
 .pbmit-slider-area .swiper-button-next {
@@ -84,6 +91,137 @@
   left: 20px;
 }
 
+.pbmit-slider-area .swiper-button-prev svg, .pbmit-slider-area .swiper-button-next svg {
+  transition: width 0.2s ease;
+}
+
 .pbmit-slider-area .swiper-button-next::after, .pbmit-slider-area .swiper-button-prev::after {
   content: '';
+}
+
+.hero-title_animation {
+  animation-duration: 2s;
+  animation-delay: 0.2s;
+}
+
+.hero-subtitle_animation {
+  animation-duration: 2s;
+  animation-delay: 0.4s;
+}
+
+.hero-button_animation {
+  animation-duration: 1s;
+  animation-delay: 1.4s;
+}
+
+@media (max-width: 1399px) {
+  .hero-slide {
+    height: 600px;
+  }  
+  .hero-slide-title {
+    font-size: 64px;
+    line-height: 56px;
+  }
+  .hero-slide-subtitle {
+    font-size: 18px;
+  }
+  .hero-slide-button {
+    margin-top: 42px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .pbmit-slider-area .swiper-button-next, .pbmit-slider-area .swiper-button-prev {
+    opacity: 0 !important;
+    pointer-events: none;
+  }
+  .hero-slide {
+    height: 550px;
+  }
+  .hero-slide-title {
+    font-size: 56px;
+    line-height: 48px;
+  }
+  .hero-slide-subtitle {
+    font-size: 16px;
+    line-height: 18px;
+  }
+  .hero-slide-button {
+    font-size: 14px;
+    padding: 14px 32px;
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 991px) {
+  .hero-slide {
+    height: 500px;
+  }  
+  .hero-slide-title {
+    font-size: 52px;
+    line-height: 48px;
+  }
+  .hero-slide-subtitle {
+    line-height: 16px;
+  }
+  .hero-slide-button {
+    font-size: 14px;
+    padding: 14px 32px;
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-slide-title {
+    font-size: 42px;
+    line-height: 36px;
+  }
+  .hero-slide-subtitle { 
+    font-size: 15px;
+  }
+  .hero-slide-button {
+    font-size: 14px;
+    padding: 14px 32px;
+    margin-top: 48px;
+  }
+}
+
+@media (max-width: 575px) {
+  .hero-slide {
+    height: 440px;
+  }  
+  .hero-slide-title {
+    font-size: 36px;
+    line-height: 32px;
+  }
+  .hero-slide-subtitle { 
+    font-size: 14px;
+  }
+  .hero-slide-button {
+    font-size: 14px;
+    padding: 14px 32px;
+    margin-top: 48px;
+  }
+}
+
+@media (hover: hover) {
+  .hero-slide-button:hover {
+    color: #fff;
+  }
+
+  .pbmit-slider-area .swiper-button-next:hover, .pbmit-slider-area .swiper-button-prev:hover {
+    background-color: rgba(255, 255, 255, 1);
+    opacity: 1 !important;
+  }
+
+  .pbmit-slider-area .swiper-button-prev:hover svg, .pbmit-slider-area .swiper-button-next:hover svg {
+    width: 32px;
+  }
+}
+
+@media (hover: none) {
+  .pbmit-slider-area .swiper-button-next, .pbmit-slider-area .swiper-button-prev {
+    opacity: 0 !important;
+    pointer-events: none;
+  }
 }
