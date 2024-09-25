@@ -425,10 +425,10 @@ const heroSwiper = new Swiper('#hero-slider.swiper-container', {
     el: '.swiper-pagination',
     clickable: true,
   },
-  // autoplay: {
-  //   delay: 5000,
-  //   disableOnInteraction: false,
-  // },
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
   speed: 1000,
   effect: 'fade',
   fadeEffect: {
