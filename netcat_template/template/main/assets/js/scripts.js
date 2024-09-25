@@ -444,16 +444,22 @@ const heroSwiper = new Swiper('#hero-slider.swiper-container', {
 
         const title = currentSlide.querySelector('.hero-slide-title');
         const subtitle = currentSlide.querySelector('.hero-slide-subtitle');
+        const text = currentSlide.querySelector('.hero-slide-text');
+        const wrapper = currentSlide.querySelector('.hero-slide-items-wrapper');
         const button = currentSlide.querySelector('.hero-slide-button');
 
-        title.classList.remove('animate__fadeInLeft');
-        subtitle.classList.remove('animate__fadeInLeft');
-        button.classList.remove('animate__fadeInLeft');
+        title?.classList.remove('animate__fadeInLeft');
+        subtitle?.classList.remove('animate__fadeInLeft');
+        button?.classList.remove('animate__fadeInLeft');
+        text?.classList.remove('animate__fadeInLeft');
+        wrapper?.classList.remove('animate__fadeInUp');
 
         setTimeout(() => {
-            title.classList.add('animate__fadeInLeft');
-            subtitle.classList.add('animate__fadeInLeft');
-            button.classList.add('animate__fadeInLeft');
+            title?.classList.add('animate__fadeInLeft');
+            subtitle?.classList.add('animate__fadeInLeft');
+            button?.classList.add('animate__fadeInLeft');
+            text?.classList.add('animate__fadeInLeft');
+            wrapper?.classList.add('animate__fadeInUp');
         }, 100);
     }
 }
