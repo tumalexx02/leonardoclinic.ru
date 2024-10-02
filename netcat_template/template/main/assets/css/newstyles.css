@@ -14,11 +14,16 @@
   position: relative;
 }
 
+.hero-slide-text-wrapper {
+  z-index: 10;
+}
+
 .hero-slide {
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 693px;
+  position: relative;
 }
 
 .hero-slide img {
@@ -57,6 +62,14 @@
   padding: 16px 41px;
   background-color: #42341E;
   margin-top: 48px;
+}
+
+.hero-slide-mobile-button {
+  display: none;
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .hero-slide-2 .hero-slide-title {
@@ -188,6 +201,37 @@
   animation-delay: 1.4s;
 }
 
+.hero-slide-background {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(255,255,255,1), rgba(255,255,255,0) 60%);
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-slider-gradient {
+  display: none;
+  min-height: 40%;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  background: linear-gradient(to bottom, rgba(255,255,255,1), rgba(255,255,255,0) 60%);
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-slide-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 @media (max-width: 1399px) {
   .hero-slide {
     height: 600px;
@@ -279,20 +323,44 @@
 }
 
 @media (max-width: 767px) {
+  .hero-slide {
+    height: auto;
+  }
   .hero-slide-title {
+    text-align: center;
     font-size: 42px;
     line-height: 36px;
   }
   .hero-slide-subtitle { 
+    margin-top: 10px;
     font-size: 15px;
   }
   .hero-slide-text {
     display: none;
   }
   .hero-slide-button {
+    display: none;
     font-size: 14px;
     padding: 14px 32px;
     margin-top: 48px;
+  }
+  .hero-slide-mobile-button {
+    display: inline-block;
+  }
+  .hero-slide-text-wrapper {
+    /* background-color: #f6f6f6; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 32px 0 !important;
+  }
+  .hero-slide-background {
+    position: relative;
+    aspect-ratio: 3/2;
+  }
+  .hero-slider-gradient {
+    display: block;
   }
 }
 
